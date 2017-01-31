@@ -14,13 +14,3 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.listen(3000, () => {
     console.log('Server is listening on port 3000');
 });
-
-app.get('/hello', (req, res) => {
-    res.send('world');
-});
-
-app.get('/add/:x/:y', (req, res) => {
-    const x = req.params.x * 1;
-    const y = req.params.y * 1;
-    res.send({sum: x + y});
-});
